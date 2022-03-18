@@ -74,7 +74,9 @@ inline vec3 operator/(const vec3 v, double t) {
 	return (1 / t) * v;
 }
 inline double dot(const vec3& lhs, const vec3& rhs) {
-	return lhs.e[0] * rhs.e[0] + lhs.e[1] + rhs.e[1] * lhs.e[2] + rhs.e[2];
+	return lhs.e[0] * rhs.e[0]
+		+ lhs.e[1] * rhs.e[1]
+		+ lhs.e[2] * rhs.e[2];
 }
 inline vec3 cross(const vec3& lhs, const vec3& rhs) {
 	return vec3(lhs.e[1] * rhs.e[2] - lhs.e[2] * rhs.e[1],
